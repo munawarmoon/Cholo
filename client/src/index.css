@@ -1,0 +1,136 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --green: #0f9d58;
+  --green-dark: #0b7a44;
+  --green-soft: #e7f5ed;
+  --orange: #e8771a;
+  --orange-soft: #fdf0e3;
+  --red: #d93025;
+  --navy: #14213d;
+
+  --bg: #fffefb;
+  --surface: #ffffff;
+  --surface-alt: #f8f7f2;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e3e2db;
+  --shadow: 0 1px 2px rgba(20, 33, 61, 0.05), 0 4px 12px rgba(20, 33, 61, 0.05);
+
+  --font: 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --radius: 12px;
+  --container: 1200px;
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --green: #2fbf7a;
+  --green-dark: #25a367;
+  --green-soft: #12301f;
+  --orange: #f59a4a;
+  --orange-soft: #3a2815;
+  --red: #f47067;
+  --navy: #f3f4f6;
+
+  --bg: #0f1722;
+  --surface: #172131;
+  --surface-alt: #131c2a;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #2a3648;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  color-scheme: dark;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* ---------- App layout ---------- */
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__main {
+  flex: 1;
+}
+
+/* Shared page container */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+}
